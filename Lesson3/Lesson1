@@ -1,0 +1,60 @@
+loops.forever(function () {
+    blocks.place(DIAMOND_BLOCK, positions.groundPosition(player.position()))
+})
+
+
+### @explicitHints 1
+
+# Activity: Place a diamond block under our feet
+
+## Step 1
+
+Let's get started by placing a ``||Loops: forever||`` block
+
+# ~ tutorialHint
+```blocks
+	loops.forever(function () {
+	})
+```
+
+## Step 2
+
+Next let's add a  ``||Blocks: place||`` and make it a **Diamond Block**
+
+# ~ tutorialHint
+```blocks
+loops.forever(function () {
+    blocks.place(DIAMOND_BLOCK)
+})
+```
+
+## Step 3
+
+Next, we'll want to create a variable called ``||Variable: position||`` and set it to be ``||player.position()||``
+
+# ~ tutorialHint
+```blocks
+loops.forever(function () {
+	position = player.position();
+    blocks.place(DIAMOND_BLOCK)
+})
+```
+
+
+## Step 4
+Then let's update our block placement so that it is on the ground under where we are standing. Let's use ``||Positions: ground position||``
+```blocks
+loops.forever(function () {
+	position = player.position();
+    blocks.place(DIAMOND_BLOCK, positions.groundPosition())
+})
+```
+
+## Step 5
+Then set the ground at to be the variable we created...
+```blocks
+loops.forever(function () {
+	position = player.position();
+    blocks.place(DIAMOND_BLOCK, positions.groundPosition(position))
+})
+```
